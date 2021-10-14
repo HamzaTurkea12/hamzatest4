@@ -1,0 +1,430 @@
+﻿@using HospitalProject.WEBUI.Model
+@model IEnumerable<HospitalProject.WEBUI.Model.PatentInformation>
+
+@{
+    ViewBag.Title = "index";
+
+}
+
+<style>
+    table {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td {
+        font-size: larger;
+    }
+
+    td, th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+    }
+
+    th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        font-size: x-large;
+        background-color: #00771e;
+        color: white;
+    }
+
+    a {
+        direction: ltr;
+        float: right;
+        font-size: larger;
+        margin-bottom: 10px;
+        padding-right: 20px;
+    }
+</style>
+
+
+<li><a class="btn btn-primary btn-xl " href="/Patent/Add">Add GENEL BİLGİLER </a></li>
+
+@{
+    if (ViewData["All patents"] != null)
+    {
+
+        <h1> GENEL BİLGİLER</h1>
+        <table>
+            <tr>
+                <th>Do um Tarihi</th>
+                <th>Cins</th>
+                <th>Ülke</th>
+                <th>Etnik Köken</th>
+                <th>Boy</th>
+                <th>Kilo</th>
+                <th>E itim Sev esi</th>
+            </tr>
+            @foreach (PatentInformation p in (IEnumerable<PatentInformation>)ViewData["All patents"])
+            {
+                <tr>
+
+
+                    <td>@p.Gender</td>
+                    <td>@p.Country</td>
+                    <td>@p.birthdate</td>
+                    <td>@p.Sweat</td>
+                    <td>@p.Length</td>
+                    <td>@p.Weight</td>
+                    <td>@p.education_level</td>
+
+
+
+                </tr>
+            }
+        </table>
+
+
+    }
+    else
+    {
+        <p>There are no Information to display in database.</p>
+    }
+
+
+
+}
+@{
+    if (ViewData["All patents"] != null)
+    {
+        <h1> SOSYAL Y AM ÖZELLİKLER</h1>
+        <h1> GENEL BİLGİLER</h1>
+        <p>SİGARA KULLANIMI</p>
+        <table>
+
+            <tr>
+                <th>Durum</th>
+                <th>Miktar Gün</th>
+                <th>Mevcut Durum</th>
+                <th>Bırakı Tarihi</th>
+
+            </tr>
+            @foreach (PatentInformation p in (IEnumerable<PatentInformation>)ViewData["All patents"])
+            {
+                <tr>
+
+
+                    <td>@p.profession</td>
+                    <td>@p.Make_environmental_display</td>
+                    <td>@p.condition</td>
+                    <td>@p.medicine</td>
+
+                </tr>
+            }
+        </table>
+        <p>SİGARA KULLANIMI</p>
+        <table>
+
+            <tr>
+                <th>Durum</th>
+                <th>Miktar Gün</th>
+                <th>Mevcut Durum</th>
+                <th>Bırakı Tarihi</th>
+
+            </tr>
+            @foreach (PatentInformation p in (IEnumerable<PatentInformation>)ViewData["All patents"])
+            {
+                <tr>
+
+
+                    <td>@p.profession</td>
+                    <td>@p.Make_environmental_display</td>
+                    <td>@p.condition</td>
+                    <td>@p.medicine</td>
+
+                </tr>
+            }
+        </table>
+
+        <p>MADDE KULLANIMI</p>
+        <table>
+
+            <tr>
+                <th>Durum</th>
+                <th>Ti</th>
+                <th>Miktar/Gün</th>
+                <th>Mevcut Durum</th>
+
+            </tr>
+            @foreach (PatentInformation p in (IEnumerable<PatentInformation>)ViewData["All patents"])
+            {
+                <tr>
+
+
+                    <td>@p.profession</td>
+
+                    <td>@p.Quantity_per_day</td>
+                    <td>@p.current_situation</td>
+                    <td>@p.date_of_publication</td>
+
+
+
+                </tr>
+            }
+        </table>
+
+    }
+
+
+    else
+    {
+        <p>There are no Information to display in database.</p>
+    }
+
+
+
+}
+@{
+    if (ViewData["All patents"] != null)
+    {
+
+        <h1> GENEL BİLGİLER</h1>
+        <table>
+            <tr>
+                <th>Do um Tarihi</th>
+                <th>Cins</th>
+                <th>Ülke</th>
+                <th>Etnik Köken</th>
+                <th>Boy</th>
+                <th>Kilo</th>
+                <th>E itim Sev esi</th>
+            </tr>
+            @foreach (PatentInformation p in (IEnumerable<PatentInformation>)ViewData["All patents"])
+            {
+                <tr>
+
+
+                    <td>@p.Gender</td>
+                    <td>@p.Country</td>
+                    <td>@p.birthdate</td>
+                    <td>@p.Sweat</td>
+                    <td>@p.Length</td>
+                    <td>@p.Weight</td>
+                    <td>@p.education_level</td>
+
+
+
+                </tr>
+            }
+        </table>
+
+
+    }
+    else
+    {
+        <p>There are no Information to display in database.</p>
+    }
+
+
+
+}
+@{
+    if (ViewData["All patents"] != null)
+    {
+
+        <h1> DONÖR MEDİKAL GE Ml I</h1>
+        <table>
+            <tr>
+                <th>Hastalık/Tedavi/BozukIuk/YaraIanma</th>
+                <th>Tanı Tarihi</th>
+                <th>Durumu</th>
+                <th>ICD-IO kodu</th>
+
+            </tr>
+            @foreach (PatentInformation p in (IEnumerable<PatentInformation>)ViewData["All patents"])
+            {
+                <tr>
+
+
+                    <td>@p.illness</td>
+                    <td>@p.condition1</td>
+                    <td>@p.code</td>
+                    <td>@p.Diagnosis_date</td>
+
+                </tr>
+            }
+        </table>
+
+
+
+    }
+    else
+    {
+        <p>There are no Information to display in database.</p>
+    }
+
+
+
+}
+@{
+    if (ViewData["All patents"] != null)
+    {
+
+        <h1> MEDİKAL GE Ml İ</h1>
+        <table>
+            <tr>
+                <th>Yakınlık</th>
+                <th>Tanı</th>
+                <th>Tanı yili</th>
+
+
+            </tr>
+            @foreach (PatentInformation p in (IEnumerable<PatentInformation>)ViewData["All patents"])
+            {
+                <tr>
+
+
+                    <td>@p.proximity</td>
+                    <td>@p.diagnosis</td>
+                    <td>@p.annual_diagnosis</td>
+
+                </tr>
+            }
+        </table>
+
+
+
+    }
+    else
+    {
+        <p>There are no Information to display in database.</p>
+    }
+
+
+
+}
+@{
+    if (ViewData["All patents"] != null)
+    {
+
+        <h1> JinEKOLOJIK GecMISI</h1>
+        <table>
+            <tr>
+                <th>Menstural Durum</th>
+                <th>Son Regl Tarihi</th>
+                <th>Hamilelik</th>
+                <th>Dogum</th>
+
+
+            </tr>
+            @foreach (PatentInformation p in (IEnumerable<PatentInformation>)ViewData["All patents"])
+            {
+                <tr>
+
+
+                    <td>@p.m</td>
+                    <td>@p.s</td>
+                    <td>@p.a</td>
+                    <td>@p.d</td>
+
+                </tr>
+            }
+        </table>
+
+
+    }
+    else
+    {
+        <p>There are no Information to display in database.</p>
+    }
+
+
+
+}
+@{
+    if (ViewData["All patents"] != null)
+    {
+
+        <h1> İLAÇLAR (KEMOTERAPİ İLAÇLARI DAHİL)</h1>
+        <table>
+            <tr>
+                <th>İlaç</th>
+                <th>Doz</th>
+                <th>Birim</th>
+                <th>Kullanım kli</th>
+                <th>Sıklık</th>
+                <th>Mevcut Durum</th>
+
+
+            </tr>
+            @foreach (PatentInformation p in (IEnumerable<PatentInformation>)ViewData["All patents"])
+            {
+                <tr>
+
+
+                    <td>@p.medicine2</td>
+                    <td>@p.dose</td>
+                    <td>@p.use_cli_module</td>
+                    <td>@p.repetition</td>
+                    <td>@p.current_situation2</td>
+                    <td>@p.current_situation2</td>
+
+                </tr>
+            }
+        </table>
+
+
+
+    }
+    else
+    {
+        <p>There are no Information to display in database.</p>
+    }
+
+
+
+}
+@{
+    if (ViewData["All patents"] != null)
+    {
+
+        <h1> VİRAL ENFEKSİYONLAR</h1>
+        <table>
+            <tr>
+                <th>Virus</th>
+                <th>Test Durumu</th>
+                <th>Sonu</th>
+
+
+            </tr>
+            @foreach (PatentInformation p in (IEnumerable<PatentInformation>)ViewData["All patents"])
+            {
+                <tr>
+
+
+                    <td>@p.virus</td>
+                    <td>@p.test_case</td>
+                    <td>@p.end</td>
+
+                </tr>
+            }
+        </table>
+
+
+    }
+    else
+    {
+        <p>There are no Information to display in database.</p>
+    }
+
+
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,304 @@
+﻿@model HospitalProject.WEBUI.Model.PatentInformation
+
+@{
+    ViewData["Title"] = "Add";
+}
+<style>
+    h4 {
+        float: left;
+        display: inline-block;
+        background-color: #00771e;
+        color: #fff;
+        font-size: 1.5em;
+        padding: 5px 10px;
+        text-decoration: none;
+    }
+</style>
+
+<h4>PatentInformation</h4>
+<br />
+<br />
+<br />
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Add">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <p>Gender</p>
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>Country</p>
+                <label asp-for="Country" class="control-label"></label>
+                <input asp-for="Country" class="form-control" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>birthdate</p>
+                <label asp-for="birthdate" class="control-label"></label>
+                <input asp-for="birthdate" class="form-control" />
+                <span asp-validation-for="birthdate" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>Sweat</p>
+                <label asp-for="Sweat" class="control-label"></label>
+                <input asp-for="Sweat" class="form-control" />
+                <span asp-validation-for="Sweat" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>Length</p>
+                <label asp-for="Length" class="control-label"></label>
+                <input asp-for="Length" class="form-control" />
+                <span asp-validation-for="Length" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>Weight</p>
+                <label asp-for="Weight" class="control-label"></label>
+                <input asp-for="Weight" class="form-control" />
+                <span asp-validation-for="Weight" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>education_level</p>
+                <label asp-for="education_level" class="control-label"></label>
+                <input asp-for="education_level" class="form-control" />
+                <span asp-validation-for="education_level" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>profession</p>
+                <label asp-for="profession" class="control-label"></label>
+                <input asp-for="profession" class="form-control" />
+                <span asp-validation-for="profession" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>Make_environmental_display</p>
+                <label asp-for="Make_environmental_display" class="control-label"></label>
+                <input asp-for="Make_environmental_display" class="form-control" />
+                <span asp-validation-for="Make_environmental_display" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>condition</p>
+                <label asp-for="condition" class="control-label"></label>
+                <input asp-for="condition" class="form-control" />
+                <span asp-validation-for="condition" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>medicine</p>
+                <label asp-for="medicine" class="control-label"></label>
+                <input asp-for="medicine" class="form-control" />
+                <span asp-validation-for="medicine" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>Quantity_per_day</p>
+                <label asp-for="Quantity_per_day" class="control-label"></label>
+                <input asp-for="Quantity_per_day" class="form-control" />
+                <span asp-validation-for="Quantity_per_day" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>current_situation</p>
+                <label asp-for="current_situation" class="control-label"></label>
+                <input asp-for="current_situation" class="form-control" />
+                <span asp-validation-for="current_situation" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>date_of_publication</p>
+                <label asp-for="date_of_publication" class="control-label"></label>
+                <input asp-for="date_of_publication" class="form-control" />
+                <span asp-validation-for="date_of_publication" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>illness</p>
+                <label asp-for="illness" class="control-label"></label>
+                <input asp-for="illness" class="form-control" />
+                <span asp-validation-for="illness" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>condition1</p>
+                <label asp-for="condition1" class="control-label"></label>
+                <input asp-for="condition1" class="form-control" />
+                <span asp-validation-for="condition1" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>code</p>
+                <label asp-for="code" class="control-label"></label>
+                <input asp-for="code" class="form-control" />
+                <span asp-validation-for="code" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>Diagnosis_date</p>
+                <label asp-for="Diagnosis_date" class="control-label"></label>
+                <input asp-for="Diagnosis_date" class="form-control" />
+                <span asp-validation-for="Diagnosis_date" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>proximity</p>
+                <label asp-for="proximity" class="control-label"></label>
+                <input asp-for="proximity" class="form-control" />
+                <span asp-validation-for="proximity" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>diagnosis</p>
+                <label asp-for="diagnosis" class="control-label"></label>
+                <input asp-for="diagnosis" class="form-control" />
+                <span asp-validation-for="diagnosis" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>annual_diagnosis</p>
+                <label asp-for="annual_diagnosis" class="control-label"></label>
+                <input asp-for="annual_diagnosis" class="form-control" />
+                <span asp-validation-for="annual_diagnosis" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>m</p>
+                <label asp-for="m" class="control-label"></label>
+                <input asp-for="m" class="form-control" />
+                <span asp-validation-for="m" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>s</p>
+                <label asp-for="s" class="control-label"></label>
+                <input asp-for="s" class="form-control" />
+                <span asp-validation-for="s" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>a</p>
+                <label asp-for="a" class="control-label"></label>
+                <input asp-for="a" class="form-control" />
+                <span asp-validation-for="a" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>d</p>
+                <label asp-for="d" class="control-label"></label>
+                <input asp-for="d" class="form-control" />
+                <span asp-validation-for="d" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>medicine2</p>
+                <label asp-for="medicine2" class="control-label"></label>
+                <input asp-for="medicine2" class="form-control" />
+                <span asp-validation-for="medicine2" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>dose</p>
+                <label asp-for="dose" class="control-label"></label>
+                <input asp-for="dose" class="form-control" />
+                <span asp-validation-for="dose" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>use_cli_module</p>
+                <label asp-for="use_cli_module" class="control-label"></label>
+                <input asp-for="use_cli_module" class="form-control" />
+                <span asp-validation-for="use_cli_module" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>repetition</p>
+                <label asp-for="repetition" class="control-label"></label>
+                <input asp-for="repetition" class="form-control" />
+                <span asp-validation-for="repetition" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>current_situation2</p>
+                <label asp-for="current_situation2" class="control-label"></label>
+                <input asp-for="current_situation2" class="form-control" />
+                <span asp-validation-for="current_situation2" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>virus</p>
+                <label asp-for="virus" class="control-label"></label>
+                <input asp-for="virus" class="form-control" />
+                <span asp-validation-for="virus" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>test_case</p>
+                <label asp-for="test_case" class="control-label"></label>
+                <input asp-for="test_case" class="form-control" />
+                <span asp-validation-for="test_case" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <p>end</p>
+                <label asp-for="end" class="control-label"></label>
+                <input asp-for="end" class="form-control" />
+                <span asp-validation-for="end" class="text-danger"></span>
+            </div>
+            <hr />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

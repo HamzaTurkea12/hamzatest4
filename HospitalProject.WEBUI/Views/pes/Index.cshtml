@@ -1,0 +1,198 @@
+﻿@using HospitalProject.WEBUI.Model
+@model IEnumerable<HospitalProject.WEBUI.Model.Specimenanddiseaseinformation>
+
+@{
+    ViewBag.Title = "index";
+
+}
+
+<style>
+    table {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td {
+        font-size: larger;
+    }
+
+    td, th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+    }
+
+    th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        font-size: x-large;
+        background-color: #00771e;
+        color: white;
+    }
+
+    a {
+        direction: ltr;
+        float: right;
+        font-size: larger;
+        margin-bottom: 10px;
+        padding-right: 20px;
+    }
+</style>
+
+
+<li><a class="btn btn-primary btn-xl " href="/pes/Add">Add GENEL BİLGİLER </a></li>
+<h1> NUMUNE BİLGİSİ VE PATOLOJİ DURUMU</h1>
+@{
+    if (ViewData["All Specimenand"] != null)
+    {
+
+    <h1> NUMUNE TOPLAMA BİLGİLERİ</h1>
+        <table>
+            <tr>
+                <th>Toplama Tarihi aa</th>
+                <th>Toplama Saati</th>
+                <th>Anotomik Bölge</th>
+                <th>Toplama Şekli</th>
+                
+            </tr>
+            @foreach (Specimenanddiseaseinformation p in (IEnumerable<Specimenanddiseaseinformation>)ViewData["All Specimenand"])
+            {
+                <tr>
+
+
+                    <td>@p.collection_date</td>
+                    <td>@p.collection_time</td>
+                    <td>@p.anatomical_region</td>
+                    <td>@p.group_type</td>
+                    
+
+
+                </tr>
+            }
+        </table>
+
+
+    }
+    else
+    {
+        <p>There are no Information to display in database.</p>
+    }
+
+
+
+}
+
+@{
+    if (ViewData["All Specimenand"] != null)
+    {
+
+    <h1> OPERASYON PROSEDÜRÜ</h1>
+        <table>
+            <tr>
+                <th>OPERASYON PROSEDÜRÜ</th>
+                
+            </tr>
+            @foreach (Specimenanddiseaseinformation p in (IEnumerable<Specimenanddiseaseinformation>)ViewData["All Specimenand"])
+            {
+                <tr>
+
+
+                    <td>@p.OPERASYON_PROSEDÜRÜ</td>
+                  
+                </tr>
+            }
+        </table>
+
+
+    }
+    else
+    {
+        <p>There are no Information to display in database.</p>
+    }
+
+
+
+}
+@{
+    if (ViewData["All Specimenand"] != null)
+    {
+
+    <h1> TANI BİLGİLERİ</h1>
+        <table>
+            <tr>
+                <th>Tanı tarihi</th>
+                <th>Klinik Tanı</th>
+                <th>ICD-IO Tanı Kodu</th>
+                
+
+            </tr>
+            @foreach (Specimenanddiseaseinformation p in (IEnumerable<Specimenanddiseaseinformation>)ViewData["All Specimenand"])
+            {
+                <tr>
+
+
+                    <td>@p.Diagnosis_date</td>
+                    <td>@p.Clinical_diagnosis</td>
+                    <td>@p.Diagnotstic_Code</td>
+                   
+
+                </tr>
+            }
+        </table>
+
+
+
+    }
+    else
+    {
+        <p>There are no Information to display in database.</p>
+    }
+
+
+
+}
+@{
+    if (ViewData["All Specimenand"] != null)
+    {
+
+    <h1> PATOLOJİ DURUMU</h1>
+        <table>
+            <tr>
+                <th>Numune To lama ekli</th>
+                <th>Mikroskopik analize</th>
+                <th>patolojik tani</th>
+
+
+            </tr>
+            @foreach (Specimenanddiseaseinformation p in (IEnumerable<Specimenanddiseaseinformation>)ViewData["All Specimenand"])
+            {
+                <tr>
+                    <td>@p.Numune_To_lama_ekli</td>
+                    <td>@p.Mikroskopik_analize</td>
+                    <td>@p.patolojik_tani</td>
+
+                </tr>
+            }
+        </table>
+
+
+
+    }
+    else
+    {
+        <p>There are no Information to display in database.</p>
+    }
+
+
+
+}
+

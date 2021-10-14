@@ -1,0 +1,119 @@
+﻿@model HospitalProject.WEBUI.Model.Specimenanddiseaseinformation
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<style>
+    h4 {
+        float: left;
+        display: inline-block;
+        background-color: #00771e;
+        color: #fff;
+        font-size: 1.5em;
+        padding: 5px 10px;
+        text-decoration: none;
+    }
+</style>
+
+<h4>Specimenanddiseaseinformation</h4>
+<br />
+<br />
+<br />
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Add">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <p>collection_date</p>
+                <label asp-for="collection_date" class="control-label"></label>
+                <input asp-for="collection_date" class="form-control" />
+                <span asp-validation-for="collection_date" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <p>collection_time</p>
+                <label asp-for="collection_time" class="control-label"></label>
+                <input asp-for="collection_time" class="form-control" />
+                <span asp-validation-for="collection_time" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <p>anatomical_region</p>
+                <label asp-for="anatomical_region" class="control-label"></label>
+                <input asp-for="anatomical_region" class="form-control" />
+                <span asp-validation-for="anatomical_region" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <p>group_type</p>
+                <label asp-for="group_type" class="control-label"></label>
+                <input asp-for="group_type" class="form-control" />
+                <span asp-validation-for="group_type" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <p>OPERASYON_PROSEDÜRÜ</p>
+                <label asp-for="OPERASYON_PROSEDÜRÜ" class="control-label"></label>
+                <input asp-for="OPERASYON_PROSEDÜRÜ" class="form-control" />
+                <span asp-validation-for="OPERASYON_PROSEDÜRÜ" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <p>Diagnosis_date</p>
+                <label asp-for="Diagnosis_date" class="control-label"></label>
+                <input asp-for="Diagnosis_date" class="form-control" />
+                <span asp-validation-for="Diagnosis_date" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <p>Clinical_diagnosis</p>
+                <label asp-for="Clinical_diagnosis" class="control-label"></label>
+                <input asp-for="Clinical_diagnosis" class="form-control" />
+                <span asp-validation-for="Clinical_diagnosis" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <p>Diagnotstic_Code</p>
+                <label asp-for="Diagnotstic_Code" class="control-label"></label>
+                <input asp-for="Diagnotstic_Code" class="form-control" />
+                <span asp-validation-for="Diagnotstic_Code" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <p>Numune_To_lama_ekli</p>
+                <label asp-for="Numune_To_lama_ekli" class="control-label"></label>
+                <input asp-for="Numune_To_lama_ekli" class="form-control" />
+                <span asp-validation-for="Numune_To_lama_ekli" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <p>Mikroskopik_analize</p>
+                <label asp-for="Mikroskopik_analize" class="control-label"></label>
+                <input asp-for="Mikroskopik_analize" class="form-control" />
+                <span asp-validation-for="Mikroskopik_analize" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <p>patolojik_tani</p>
+                <label asp-for="patolojik_tani" class="control-label"></label>
+                <input asp-for="patolojik_tani" class="form-control" />
+                <span asp-validation-for="patolojik_tani" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

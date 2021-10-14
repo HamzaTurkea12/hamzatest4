@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.11" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HospitalProject.Business\HospitalProject.Business.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="UserLogin\fonts\font-awesome-4.7.0\css\" />
+    <Folder Include="UserLogin\fonts\font-awesome-4.7.0\fonts\" />
+    <Folder Include="UserLogin\fonts\font-awesome-4.7.0\less\" />
+    <Folder Include="UserLogin\fonts\font-awesome-4.7.0\scss\" />
+    <Folder Include="UserLogin\fonts\iconic\css\" />
+    <Folder Include="UserLogin\fonts\iconic\fonts\" />
+    <Folder Include="UserLogin\vendor\animsition\css\" />
+    <Folder Include="UserLogin\vendor\animsition\js\" />
+    <Folder Include="UserLogin\vendor\bootstrap\css\" />
+    <Folder Include="UserLogin\vendor\bootstrap\js\" />
+    <Folder Include="Usertemp\fonts\line-awesome\css\" />
+    <Folder Include="Usertemp\fonts\line-awesome\fonts\" />
+    <Folder Include="ValidationRules\" />
+    <Folder Include="Mappings\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+</Project>

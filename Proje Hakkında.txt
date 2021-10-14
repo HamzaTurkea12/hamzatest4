@@ -1,0 +1,5 @@
+Selamlar
+Projeyi yapmaya ayın 10'unda başladım. DataAccess ve Entities kısmında kurmuş olduğum database bağlantıları ve hatalarının
+ayıklama süresi çok fazla olduğundan mvc(UI) kısmı için üzülerek zamanımın kalmadığını belirtmek istiyorum. Database
+konusunda herhangi bir problem yok. Business kısmına da örnek bir UserService ekledim. Mappingleri ve validationları gerçekleştirdim.
+İyi çalışmalar. 
